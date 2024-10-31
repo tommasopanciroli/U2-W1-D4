@@ -1,0 +1,57 @@
+.box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-1 {
+  background-color: darkmagenta;
+  color: white;
+  /* applichiamo una TRANSITION */
+  /* LA SINTASSI: transition: proprietà durata curva-di-accelerazione ritardo */
+  transition: width 3s ease-in 0s;
+}
+
+.box-1:hover {
+  /* l'hover è un effetto che si attiva al passaggio del mouse su un elemento */
+  width: 500px;
+}
+
+.box-2 {
+  background-color: yellow;
+  transition: background-color 2.5s linear 0s;
+}
+
+.box-2:hover {
+  background-color: cyan;
+}
+
+.box-3 {
+  background-color: forestgreen;
+  color: white;
+  transition: transform 5s ease 0s, background-color 1s linear 1s;
+  text-align: center;
+}
+
+.box-3:hover {
+  transform: rotate(360deg);
+  background-color: deeppink;
+}
+
+.box-4 {
+  background-color: aqua;
+  color: white;
+  transition: all 9s ease 0s;
+  /* OUT */
+}
+
+.box-4:hover {
+  transform: rotate(1300deg);
+  background-color: deeppink;
+  transition: all 3s ease 0s;
+  /* IN */
+}
+
+/* PER DARE UNA TRANSITION SEPARATA A IN E OUT DOBBIAMO APPLICARE LA TRANSITION ANCHE AL BOX HOVER */
